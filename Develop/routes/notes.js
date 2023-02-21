@@ -8,15 +8,11 @@ const fs = require('fs');
 
 notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
-})
+});
 
 
-notes.get('/api/notes', (req, res) => {
-    res.json(dbData)
-  })
-  
-  notes.post('api/notes', (req, res) => {
-    fs.readFile('./db/db.json', (err,data) => {
+    notes.post('/', (req, res) => {
+    readFromFile('./db/db.json', (err,data) => {
       if (err) throw err;
       const newData = JSON.parse(data);
       const newNote = {
@@ -25,7 +21,7 @@ notes.get('/api/notes', (req, res) => {
         id: uuidv4()
       }
       newData.push(newNote);
-      fs.writeFile('./db/db.json', JSON.stringify(newData), (err) => {
+      readAndAppend('./db/db.json', JSON.stringify(newData), (err) => {
         if (err) throw err;
       })
     })
