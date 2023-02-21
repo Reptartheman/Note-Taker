@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
-const apiRoute = ('./routes/index.js');
-const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
-const dbData = require('./db/db.json');
+const api = require('./routes/index.js');
+
 const app = express();
+
 const PORT = process.env.PORT || 3001;
 
 
@@ -12,28 +11,15 @@ const PORT = process.env.PORT || 3001;
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/api', api);
+
 app.use(express.static('public'));
 
 
-app.get('/api/notes', (req, res) => {
-  res.json(dbData)
-})
-
-app.post('api/notes', (req, res) => {
-  fs.readFile('./db/db.json', (err,data) => {
-    if (err) throw err;
-    const newData = JSON.parse(data);
-    const newNote = {
-      title: req.body.title,
-      text: req.body.text,
-      id: uuidv4()
-    }
-    newData.push(newNote);
-    fs.writeFile('./db/db.json', JSON.stringify(newData), (err) => {
-      if (err) throw err;
-    })
-  })
-})
+//GET Routes to files
+app.get('/', (req, res)=> {
+  res.sendFile(path.join(__dirname, './public/index.html'))
+});
 
 //Path to notes 
   app.get('/notes', (req, res) => {
@@ -42,7 +28,7 @@ app.post('api/notes', (req, res) => {
 
 
 //Path to index
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
