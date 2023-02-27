@@ -1,17 +1,17 @@
 [
     {
-        "title": "test note 1",
-        "text": "this note is a test as part of the note testing system",
-        "note_id": "87555c07-96b7-43ec-8537-eed64239e7bd"
+        "title": "test 1",
+        "text": "test",
+        "id": "8c576b9f-db4e-4deb-90f2-f311bf36b04b"
     },
     {
-        "title": "test note 2",
-        "text": "this note is a second test",
-        "note_id": "0e9dd972-cf54-414e-8d3c-7c1af961f537"
+        "title": "test2",
+        "text": "test",
+        "id": "3d3207ea-8a67-4d15-bc90-00b9d40be09f"
     },
     {
-        "title": "test 3",
-        "text": "this note is a test as well",
-        "note_id": "4149f982-5245-440f-84b4-51e5e4074378"
+        "title": "test3",
+        "text": "test",
+        "id": "26968daf-90c0-4f19-a992-3766beecd749"
     }
 ]
