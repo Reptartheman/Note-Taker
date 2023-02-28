@@ -8,8 +8,10 @@ This web-based application allows the user to write, save and delete notes so th
 <img width="1691" alt="Screen Shot 2023-02-28 at 11 19 16 AM" src="https://user-images.githubusercontent.com/117610334/221913883-d10556f2-9469-4879-a4ba-f860f0fd6887.png">
 <img width="1691" alt="Screen Shot 2023-02-28 at 11 19 59 AM" src="https://user-images.githubusercontent.com/117610334/221913901-15fe96f5-0b1d-45f6-85fa-302f6d0a515b.png">
 <img width="1690" alt="Screen Shot 2023-02-28 at 11 19 46 AM" src="https://user-images.githubusercontent.com/117610334/221913911-1d29c8f0-d615-40c2-95fe-96a653c985f4.png">
+
 ## How to use
 The user can visit https://thawing-plateau-90815.herokuapp.com/ and simply type in the note name and a note description and press the save icon in the top right. If they want to access an already saved note they can click on the note title on the left sidebar and the note will appear in the larger section on the right side.
+
 ## Sources
 YouTube: The Net Ninja
 Documentation: Expressjs, W3 schools, MDN webdocs, JavaScript.info, SoloLearn, Mimo, npm.
